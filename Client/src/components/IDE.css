@@ -1,0 +1,63 @@
+.red{
+    color:Red
+}
+.blue{
+    color: blue;
+}
+.CodeBox{
+    width:100%;
+    height:90%;
+    background-color: rgba(52, 0, 36, 0.704);
+    margin-bottom:5px;
+    color:rgb(182, 182, 182);
+    overflow: hidden;
+}
+.TextBox, .HighlightInputTextArea{
+    max-width:99%;
+    max-height:99%;
+    width:99%;
+    height:99%;
+    border:none;
+    background-color:transparent;
+    color:transparent;
+    font-size:12px;
+    display:inline-block;
+    resize: none;
+
+}
+.HighlightInputTextArea{
+    position: absolute;
+    height:90%;
+    z-index: 1;
+    padding: 0px;
+    font: 400 14px system-ui;
+    margin:0px;
+    tab-size: 3;
+}
+.HighlightInputTextArea:focus{
+    color:none;
+    background:none;
+    outline:none;
+}
+.HighlightInput{
+    max-width:99%;
+    max-height:95%;
+    width:99%;
+    height:99%;   
+    font-size: 14px;
+}
+
+.results{
+    display: inline;
+    position: absolute;
+    margin:0px;
+    padding:0px;
+    font: 400 14px system-ui;
+    overflow-y:scroll;
+}
+
+pre{
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+}

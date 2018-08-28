@@ -1,0 +1,16 @@
+.DockerIcon{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.308) 0%,transparent 5%,transparent 65%,rgba(255, 255, 255, 0.308)100%);
+    border-radius: 10px;
+    margin:auto;
+    margin-top:10%;
+    margin-bottom:10%;
+    height:15%;
+    width:80%;
+    max-width:64px;
+    max-height:64px;
+    min-width:48px;
+    min-height:48px;
+}
+.DockerIcon:hover{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.508) 0%,transparent 3%,transparent 50%,rgba(255, 255, 255, 0.508)100%);
+}

@@ -1,0 +1,230 @@
+.MyPC{
+       
+    width: 150px;
+    margin-left: 30%;
+    margin-top: 4%;
+    margin-bottom: 0%;
+}
+.MyPCHeader{
+    position: static;
+}
+.MyPCHeaders{
+
+    width: 250px;
+    margin-left: 18%;       
+}
+.MyPCInfoText{
+     margin-left: 60%;
+     margin-top: -3%;
+}
+.Header{
+    position: relative;
+    width:100%;
+    top:0;
+    margin:0;
+    padding:0;
+}
+.TerminalButtons{
+    width:100%;
+    max-height:24px;
+    position: static;
+    margin-top: -19px;
+    display:flex;
+    margin-bottom:0px;
+}
+#REDC
+{
+    position: relative;
+    display: block;
+    background-color: #EF5350;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px #EF9A9A;
+    z-index: 1;
+}
+#YellowC
+{
+
+    position: relative;
+    display: block;
+    background-color: #FFEE58;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 5px #FFF59D;
+    z-index: 1;
+}
+#GreenC
+{
+    position: relative;
+    display: block;
+    background-color: #66BB6A;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 5px #C5E1A5;
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.Desktop{
+    display:flex;
+    height:100%;
+    width:100%;
+    background-color: rgba(66, 66, 66,.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+
+.CMD{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: flex-start;
+    flex-grow: 1;    
+    color: white;
+    background-color: rgba(66, 66, 66,.75);
+    z-index:0;
+    border-top: 20px solid #bdbdbd;
+    border-bottom: 2px solid #bdbdbd;
+    border-left: 2px solid #bdbdbd;
+    border-right: 2px solid #bdbdbd; 
+    max-height: 85%; height: 85%;
+    margin-left:2%;
+    margin-right:2%;
+    border-radius: 5px 5px 0px 0px;
+    background-image: url('http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.MainHeader{
+    text-align: center;
+    max-height: 10%;
+    width:100%;
+    margin-top:3%;
+    font-size: 3em;
+}
+
+#CMD_MyComputer
+{
+    display:block;
+    height:90%;
+    max-width: 100%; width: 100%;
+    margin-top:1%;
+    overflow-y: scroll;
+    margin-bottom:2%;
+}
+#UserLocation
+{
+    width:100%;
+    color: #8BC34A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    max-height: 10%;
+    font-weight: 300;   
+    position: relative;
+    margin:0;
+}
+#Internet_msg
+{
+    color: white;
+    margin-left: 10%;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    margin-top: -1%;
+}
+.Internet_text
+{
+    margin-left: 40%;
+}
+
+#BreachB{background-color: transparent; border: 2px solid #8BC34A; width: 164px; margin-top:0; margin-left: 42%; color: #8BC34A;}
+#AccessB{background-color: transparent; border: 2px solid #8BC34A; width: 164px; margin-top:0; margin-left: 42%; color: #8BC34A;}   
+#ConnectB{background-color: transparent; border: 2px solid #8BC34A; width: 164px;  margin-top: -8.5%; margin-left: 65%; color: #8BC34A;}
+#IP_AddressI{background-color: transparent; border: 1px solid #8BC34A;  color: white; width:40%; margin-left:20%; margin-top:10%;margin-left:20%;}
+#L_IP{margin-left:20%; margin-top:6%;}
+#Internet_msg{border-bottom:1px solid #8BC34A; width:80%;}
+    
+.ZombieTask
+{
+background-color: transparent; border: 1px dashed #8BC34A;  color: white; width:100%; height: 32px; margin-top:-5;
+}
+.ZTable > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+padding-top: 10px;
+padding-bottom: 5px;
+background-color: #616161;
+color: #8BC34A;
+}
+.ZTable > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {
+padding-top: 10px;
+padding-bottom: 5px;
+background-color: transparent;
+color: #8BC34A;
+}
+.ZTable > thead > tr > th
+{
+color:white;
+}
+/* Dropdown Button */
+.dropbtn {
+background-color: transparent;
+border: 1px dashed #8BC34A;
+color: #8BC34A;
+height: 32;
+margin-top:-5;
+font-size: 16px;
+cursor: pointer;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color:#616161;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content .ZDrop {
+ background-color: transparent;
+ border:none;
+ width:100%;
+color: black;
+padding: 6px 8px;
+text-decoration: none;
+display: block;
+text-align: center;
+color: #8BC34A;	
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content .ZDrop:hover {border: 2px solid #8BC34A;background-color: #424242; color:white;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+border: 2px solid #8BC34A;
+color:white;
+}

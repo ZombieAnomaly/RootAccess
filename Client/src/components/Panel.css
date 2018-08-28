@@ -1,0 +1,14 @@
+.Panel{
+    display:flex;
+    position: absolute;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: rgba(66, 66, 66,.9);
+}
+
+.dragHandle{
+    width:100%;
+    height:5%;
+    min-height:20px;
+    background-color: rgba(41, 41, 41, 0.9);
+}
