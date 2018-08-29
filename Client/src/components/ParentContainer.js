@@ -15,41 +15,24 @@ class ParentContainer extends Component{
             },
             clientState:{
                 signedIn:false,
+                windows: {
+                    system:{open:false},
+                    fileExplorer:{open:false},
+                    tor:{open:false},
+                    wallet:{open:false},
+                    terminal:{open:false},
+                    ralEditor:{open:false},
+                    zombies:{open:false},
+                }
             },
             virtualPC:{},
             connection: "",
         }
 
-        this.text = `
-        class Firewall::
-
-            func constructor():
-                RootAccess.CPU.Threads("Main").Inject(this);
-            :end
-
-        ::end
-
-        class Cracker::
-            
-            func constructor():
-                a = 0;
-                if(a==0){
-                    a=1;
-                }
-            :end
-
-        ::end
-
-        f = Firewall();
-        `;
-
-    //this.compile(this.text);
     this.checkSession();
-    this.handleSuccess = this.handleSuccess.bind(this);
-    this.checkSession = this.checkSession.bind(this);
     }
 
-    checkSession(){
+    checkSession = () => {
         Asyncfunctions.CheckSessionAPI()
             .then(res => {
                 if(!res.session){return};
@@ -67,7 +50,7 @@ class ParentContainer extends Component{
         this.VM.Compile(this.text);
     }
 
-    handleSuccess(user){
+    handleSuccess = (user) => {
         if(user.data[0]){user.data = user.data[0]}
         let s = Object.assign({}, this.state);
         s.clientState.signedIn = true;
@@ -77,11 +60,19 @@ class ParentContainer extends Component{
         this.setState(s);
     }
 
+    updateWindows = (window) => {
+        let s = Object.assign({}, this.state);
+        let windows = Object.assign({}, s.clientState.windows);
+        windows[window].open = !windows[window].open;
+        s.clientState.windows = windows;
+        this.setState(s);
+    }
+
     render(){
         if(this.state.clientState.signedIn){
             return(
                 <div className = "ParentContainer">
-                    <Desktop loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
+                    <Desktop updateWindows={this.updateWindows} windows={this.state.clientState.windows} loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
                 </div>
                 
             );

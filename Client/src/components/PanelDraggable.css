@@ -5,7 +5,6 @@
     top: 0px;
     resize: both;
     overflow:hidden;
-    justify-content: space-between;
     flex-wrap: nowrap;
     padding-bottom:7px;
     background-color:rgba(52, 0, 36, 1);

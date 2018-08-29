@@ -9,9 +9,12 @@ class PanelDraggable extends Component{
     constructor(props){
         super(props);
         this.className = "PanelDraggable";
+        
+        this.style = {};
         for(var key in this.props.style){
             this.style[key] = this.props.style[key];
         }
+
         this.state =  this.getInitState();
         this.props = props;
         this.node;
@@ -20,10 +23,11 @@ class PanelDraggable extends Component{
 
     getInitState() {
         return {
-          pos: this.props.initialPos,
-          dragging: false,
-          rel: null, // position relative to the cursor
-          style: this.style
+            visible: this.visible,
+            pos: this.props.initialPos,
+            dragging: false,
+            rel: null, // position relative to the cursor
+            style: this.style
         }
     }
 
@@ -83,10 +87,18 @@ class PanelDraggable extends Component{
         e.preventDefault()
     }
 
+    handleWindowClose = () => {
+        this.props.updateWindow();
+    }
+
+    handleWindowMin = () => {
+        this.props.updateWindow();
+    }
+
     render(){
         return(
-            <div className={this.className} style={this.state.style}>
-                <DragHandle windowName={this.props.windowName} onMouseDown={this.onMouseDown} className="dragHandle" />
+            <div className={this.className} style={{...this.state.style, ...{display:this.props.visible}}}>
+                <DragHandle minWindow={this.handleWindowMin} closeWindow={this.handleWindowClose} windowName={this.props.windowName} onMouseDown={this.onMouseDown} className="dragHandle" />
                 {this.props.children}
             </div>         
         )

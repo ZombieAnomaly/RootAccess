@@ -9,8 +9,8 @@ function DragHandle(props){
         return (
             <div onMouseDown={props.onMouseDown} className="dragHandle"> 
                 <div className="WindowControl">
-                    <div className="WindowCtrlButton"><span>x</span></div>
-                    <div className="WindowCtrlButton"><span>--</span></div>
+                    <div onClick={props.closeWindow} className="WindowCtrlButton"><span>x</span></div>
+                    <div onClick={props.minWindow} className="WindowCtrlButton"><span>--</span></div>
                     <div className="WindowCtrlButton">+</div> 
                 </div>
                 <p title={props.windowName} className="WindowName depth"> {props.windowName} </p>
