@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import  './PanelDraggable.css';
-import './DragHandle'
+import  '../../Assets/css/PanelDraggable.css';
 import DragHandle from './DragHandle';
 
 class PanelDraggable extends Component{
@@ -51,6 +50,12 @@ class PanelDraggable extends Component{
     onMouseDown = (e) => {
         // only left mouse button
         if (e.button !== 0) return
+        console.log(this.props.z);
+        if(!this.props.z){
+            this.props.updateWindowZ();
+            //return;
+        }
+
         var pos = this.node.getBoundingClientRect();
         var s = Object.assign({},this.state);
         s.dragging = true;
@@ -97,7 +102,7 @@ class PanelDraggable extends Component{
 
     render(){
         return(
-            <div className={this.className} style={{...this.state.style, ...{display:this.props.visible}}}>
+            <div className={this.className} style={{...this.state.style, ...{display:this.props.visible}, ...{zIndex:this.props.z}}}>
                 <DragHandle minWindow={this.handleWindowMin} closeWindow={this.handleWindowClose} windowName={this.props.windowName} onMouseDown={this.onMouseDown} className="dragHandle" />
                 {this.props.children}
             </div>         

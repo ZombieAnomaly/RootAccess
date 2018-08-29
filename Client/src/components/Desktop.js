@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Panel from './Panel';
-import PanelDraggable from './PanelDraggable';
+import Panel from './panels/Panel';
+import PanelDraggable from './panels/PanelDraggable';
 import RegisterLogin from './RegisterLogin';
 import InfobarBehavior from './InfobarBehavior';
 import DockerIcon from './DockerIcon';
-import IDE from './IDE';
+import IDE from './windows/IDE';
 
-import  './Desktop.css';
+import  '../Assets/css/Desktop.css';
 import onionImg from '../Assets/Images/tor.png';
 import walletImg from '../Assets/Images/wallet.png';
 import computerImg from '../Assets/Images/computer.png';
@@ -25,9 +25,16 @@ function Desktop(props){
     function updateWindows(window){
         props.updateWindows(window);
     }
+    function updateWindowsZ(window){
+        props.updateWindowsZ(window);
+    }
 
     const func = (window) => {
         updateWindows(window);
+    }
+    const funcZ = (window) => {
+        console.log('updated window z: ', window);
+        updateWindowsZ(window);
     }
 
     if(props.loggedIn){
@@ -51,11 +58,34 @@ function Desktop(props){
                     <InfobarBehavior state={props.state} ipStyle={{color:'#8BC34A'}} iconsContStyle={{color:'#8BC34A',marginRight:'1%',display:'flex'}} /> 
                 </Panel>
 
-                <PanelDraggable updateWindow={() => {func('ralEditor')}} className={"PanelDraggable"} windowName={"RootAccess IDE"} name="RAL-IDE" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.ralEditor.open ? "block" : "none"}>
+                <PanelDraggable z={props.windows.ralEditor.focus ? 1 : 0} updateWindowZ={() => {funcZ('ralEditor')}} updateWindow={() => {func('ralEditor')}} className={"PanelDraggable"} windowName={"RootAccess IDE"} name="RAL-IDE" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.ralEditor.open ? "block" : "none"}>
                     <IDE/>
                 </PanelDraggable>
 
-                
+                 <PanelDraggable z={props.windows.fileExplorer.focus ? 1 : 0} updateWindowZ={() => {funcZ('fileExplorer')}} updateWindow={() => {func('fileExplorer')}} className={"PanelDraggable"} windowName={"File Explorer"} name="fileExplorer" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.fileExplorer.open ? "block" : "none"}>
+                    File Explorer
+                </PanelDraggable>
+
+                <PanelDraggable z={props.windows.system.focus ? 1 : 0} updateWindowZ={() => {funcZ('system')}} updateWindow={() => {func('system')}} className={"PanelDraggable"} windowName={"System"} name="system" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.system.open ? "block" : "none"}>
+                    System Window
+                </PanelDraggable>
+
+                <PanelDraggable z={props.windows.tor.focus ? 1 : 0} updateWindowZ={() => {funcZ('tor')}} updateWindow={() => {func('tor')}} className={"PanelDraggable"} windowName={"TOR Browser"} name="tor" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.tor.open ? "block" : "none"}>
+                    TOR Browser
+                </PanelDraggable>
+
+                <PanelDraggable z={props.windows.wallet.focus ? 1 : 0} updateWindowZ={() => {funcZ('wallet')}} updateWindow={() => {func('wallet')}} className={"PanelDraggable"} windowName={"Crypto. Financials"} name="wallet" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.wallet.open ? "block" : "none"}>
+                    Crypto Currency Financials
+                </PanelDraggable>
+
+                <PanelDraggable z={props.windows.terminal.focus ? 1 : 0} updateWindowZ={() => {funcZ('terminal')}} updateWindow={() => {func('terminal')}} className={"PanelDraggable"} windowName={"Terminal"} name="terminal" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.terminal.open ? "block" : "none"}>
+                    Terminal!
+                </PanelDraggable>
+
+                <PanelDraggable z={props.windows.zombies.focus ? 1 : 0} updateWindowZ={() => {funcZ('zombies')}} updateWindow={() => {func('zombies')}} className={"PanelDraggable"} windowName={"Zombies"} name="system" initialPos={{x:0,y:0}} draggable={true} resizable={true} visible={props.windows.zombies.open ? "block" : "none"}>
+                    Zombies! *brains*
+                </PanelDraggable>
+
             </div>         
         )
     }else{

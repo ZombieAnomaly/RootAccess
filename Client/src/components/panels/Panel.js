@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  './Panel.css';
+import  '../../Assets/css/Panel.css';
 
 function Panel(props){
     let className = "Panel";

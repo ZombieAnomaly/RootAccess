@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './RegisterLogin.css'
+import '../Assets/css/RegisterLogin.css'
 import Asyncfunctions from '../Utilities/AsyncFunctions';
-import InputBehavior from './forms/InputBehavior';
+import InputBehavior from './form-components/InputBehavior';
 
 class RegisterLogin extends Component{
 

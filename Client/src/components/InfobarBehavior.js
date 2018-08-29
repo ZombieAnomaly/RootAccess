@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Infobar from './Infobar';
-import Clock from './Clock';
+import Clock from '../Utilities/Clock';
 
 function InfobarBehavior(props){
 

@@ -16,13 +16,13 @@ class ParentContainer extends Component{
             clientState:{
                 signedIn:false,
                 windows: {
-                    system:{open:false},
-                    fileExplorer:{open:false},
-                    tor:{open:false},
-                    wallet:{open:false},
-                    terminal:{open:false},
-                    ralEditor:{open:false},
-                    zombies:{open:false},
+                    system:{open:false, focus:false},
+                    fileExplorer:{open:false, focus:false},
+                    tor:{open:false, focus:false},
+                    wallet:{open:false, focus:false},
+                    terminal:{open:false, focus:false},
+                    ralEditor:{open:false, focus:false},
+                    zombies:{open:false, focus:false},
                 }
             },
             virtualPC:{},
@@ -68,11 +68,27 @@ class ParentContainer extends Component{
         this.setState(s);
     }
 
+    updateWindowsZ = (window) => {
+        let s = Object.assign({}, this.state);
+        let windows = Object.assign({}, s.clientState.windows);
+
+        for(var w in windows){
+            console.log(w,window);
+            if(w != window)
+                windows[w].focus = false;
+            else
+                windows[w].focus = true;
+        }
+        console.log( s.clientState.windows = windows);
+        s.clientState.windows = windows;
+        this.setState(s);
+    }
+
     render(){
         if(this.state.clientState.signedIn){
             return(
                 <div className = "ParentContainer">
-                    <Desktop updateWindows={this.updateWindows} windows={this.state.clientState.windows} loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
+                    <Desktop updateWindowsZ={this.updateWindowsZ} updateWindows={this.updateWindows} windows={this.state.clientState.windows} loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
                 </div>
                 
             );

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ParentContainer from './components/ParentContainer';
-import CustomCanvas from './components/CustomCanvas';
 import Asyncfunctions from './Utilities/AsyncFunctions';
 
 class App extends Component {
