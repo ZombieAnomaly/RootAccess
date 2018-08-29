@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import VirtualPC from './VirtualPC';
+import Desktop from './Desktop';
 // import RootAccessVM from '../RAL-Core/RootAccessVM';
 import Asyncfunctions from '../Utilities/AsyncFunctions';
 
@@ -80,15 +80,15 @@ class ParentContainer extends Component{
     render(){
         if(this.state.clientState.signedIn){
             return(
-                <div className = "ParentContainer">              
-                    <VirtualPC fullscreen={true} state={this.state}/>
+                <div className = "ParentContainer">
+                    <Desktop loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
                 </div>
                 
             );
         }else{
             return(
                 <div className = "ParentContainer">
-                    <VirtualPC onSuccess={this.handleSuccess} fullscreen={true} state={this.state}/>
+                    <Desktop onSuccess={this.handleSuccess} loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
                 </div>
                 
             );

@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import  './Panel.css';
+import  './PanelDraggable.css';
+import './DragHandle'
+import DragHandle from './DragHandle';
 
 class PanelDraggable extends Component{
 
     constructor(props){
         super(props);
         this.className = "PanelDraggable";
-        this.style = {
-            position:'absolute',
-            left: '0px',
-            top: '0px',
-            resize: 'both',
-            overflow:'hidden'
-        };
         for(var key in this.props.style){
             this.style[key] = this.props.style[key];
         }
@@ -91,7 +86,7 @@ class PanelDraggable extends Component{
     render(){
         return(
             <div className={this.className} style={this.state.style}>
-                <div onMouseDown={this.onMouseDown} className="dragHandle"> </div>
+                <DragHandle windowName={this.props.windowName} onMouseDown={this.onMouseDown} className="dragHandle" />
                 {this.props.children}
             </div>         
         )

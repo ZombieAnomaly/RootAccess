@@ -5,6 +5,8 @@ import RegisterLogin from './RegisterLogin';
 import InfobarBehavior from './InfobarBehavior';
 import DockerIcon from './DockerIcon';
 import IDE from './IDE';
+
+import  './Desktop.css';
 import onionImg from '../Assets/Images/tor.png';
 import walletImg from '../Assets/Images/wallet.png';
 import computerImg from '../Assets/Images/computer.png';
@@ -12,6 +14,7 @@ import folderImg from '../Assets/Images/folder.png';
 import terminalImg from '../Assets/Images/terminal.png';
 import ideImg from '../Assets/Images/IDE.png';
 import zedImg from '../Assets/Images/zombie.png';
+
 function Desktop(props){
     console.log(props);
 
@@ -40,8 +43,7 @@ function Desktop(props){
                     <InfobarBehavior state={props.state} ipStyle={{color:'#8BC34A'}} iconsContStyle={{color:'#8BC34A',marginRight:'1%',display:'flex'}} /> 
                 </Panel>
 
-                <PanelDraggable name="RAL-IDE" initialPos={{x:0,y:0}} style={{ color:'#8BC34A',paddingBottom:'5px',backgroundColor: " rgba(52, 0, 36, 1)",height: "300px", width:"300px", boxShadow:'1px 1px 5px black',
-                }} draggable={true} resizable={true}>
+                <PanelDraggable className={"PanelDraggable"} windowName={"RootAccess IDE"} name="RAL-IDE" initialPos={{x:0,y:0}} draggable={true} resizable={true}>
                     <IDE/>
                 </PanelDraggable>
 

@@ -1,0 +1,43 @@
+
+.Desktop{
+    display:flex;
+    height:100%;
+    width:100%;
+    background-color: rgba(66, 66, 66,.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.CMD{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-content: flex-start;
+    flex-grow: 1;    
+    color: white;
+    background-color: rgba(66, 66, 66,.75);
+    z-index:0;
+    border-top: 20px solid #bdbdbd;
+    border-bottom: 2px solid #bdbdbd;
+    border-left: 2px solid #bdbdbd;
+    border-right: 2px solid #bdbdbd; 
+    max-height: 85%; height: 85%;
+    margin-left:2%;
+    margin-right:2%;
+    border-radius: 5px 5px 0px 0px;
+    background-image: url('http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.MainHeader{
+    margin-top:3%;
+    margin-bottom:0;
+    width:100%;
+    text-align: center;
+    font-size: 2em;
+    color: #8BC34A;
+  }
+  

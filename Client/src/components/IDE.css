@@ -8,14 +8,13 @@
     width:100%;
     height:90%;
     background-color: rgba(52, 0, 36, 0.704);
-    margin-bottom:5px;
-    color:rgb(182, 182, 182);
+    color:rgb(201, 201, 201);
     overflow: hidden;
 }
 .TextBox, .HighlightInputTextArea{
-    max-width:99%;
-    max-height:99%;
-    width:99%;
+    max-width:98%;
+    max-height:98%;
+    width:98%;
     height:99%;
     border:none;
     background-color:transparent;
@@ -27,11 +26,11 @@
 }
 .HighlightInputTextArea{
     position: absolute;
-    height:90%;
+    height:80%;
     z-index: 1;
     padding: 0px;
     font: 400 14px system-ui;
-    margin:0px;
+    margin-left:1%;
     tab-size: 3;
 }
 .HighlightInputTextArea:focus{
@@ -40,10 +39,10 @@
     outline:none;
 }
 .HighlightInput{
-    max-width:99%;
+    max-width:98%;
     max-height:95%;
     width:99%;
-    height:99%;   
+    height:95%;   
     font-size: 14px;
 }
 
