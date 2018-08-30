@@ -37,6 +37,7 @@
     align-items: center;
     cursor: pointer;
     color:transparent;
+    z-index:1;
 }
 
 .WindowName{

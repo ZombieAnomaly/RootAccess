@@ -16,19 +16,18 @@ class ParentContainer extends Component{
             clientState:{
                 signedIn:false,
                 windows: {
-                    system:{open:false, focus:false},
-                    fileExplorer:{open:false, focus:false},
-                    tor:{open:false, focus:false},
-                    wallet:{open:false, focus:false},
-                    terminal:{open:false, focus:false},
-                    ralEditor:{open:false, focus:false},
-                    zombies:{open:false, focus:false},
+                    system:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
+                    fileExplorer:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
+                    tor:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
+                    wallet:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
+                    terminal:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
+                    ralEditor:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
+                    zombies:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
                 }
             },
             virtualPC:{},
             connection: "",
-        }
-
+        };
     this.checkSession();
     }
 
@@ -72,14 +71,21 @@ class ParentContainer extends Component{
         let s = Object.assign({}, this.state);
         let windows = Object.assign({}, s.clientState.windows);
 
+        for(var w in windows)
+            w != window ? windows[w].focus = false : windows[w].focus = true;
+  
+        s.clientState.windows = windows;
+        this.setState(s);
+    }
+
+    updateWindowsPos = (window, pos) => {
+        let s = Object.assign({}, this.state);
+        let windows = Object.assign({}, s.clientState.windows);
+
         for(var w in windows){
-            console.log(w,window);
-            if(w != window)
-                windows[w].focus = false;
-            else
-                windows[w].focus = true;
+            if(w == window) windows[w].pos = pos;
         }
-        console.log( s.clientState.windows = windows);
+        
         s.clientState.windows = windows;
         this.setState(s);
     }
@@ -88,7 +94,7 @@ class ParentContainer extends Component{
         if(this.state.clientState.signedIn){
             return(
                 <div className = "ParentContainer">
-                    <Desktop updateWindowsZ={this.updateWindowsZ} updateWindows={this.updateWindows} windows={this.state.clientState.windows} loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
+                    <Desktop updateWindowsPos={this.updateWindowsPos} updateWindowsZ={this.updateWindowsZ} updateWindows={this.updateWindows} windows={this.state.clientState.windows} loggedIn={this.state.clientState.signedIn} state={this.state} bg="http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg"/>
                 </div>
                 
             );
