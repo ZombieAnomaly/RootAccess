@@ -11,8 +11,8 @@ class RegisterLogin extends Component{
         this.state = {
             errorMsg: "",
             Login:{
-                Password:'',
-                Email:'',   
+                Password:'Summer1996**',
+                Email:'zombie',   
             },
             Register:{
                 Username:'',

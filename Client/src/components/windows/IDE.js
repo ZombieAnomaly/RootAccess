@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './IDE.css';
+import '../../Assets/css/IDE.css';
 import {TextController} from 'react-text-highlights';
 
 class IDE extends Component{
@@ -21,12 +21,12 @@ class IDE extends Component{
     render(){
         return(
             <div className="CodeBox">
-            <TextController caret={{style:{position:'relative', right:'2px'},timer:500,character:"|"}} regex={/\/#$\`~]/g} defaultText={""} tabbing={true} submitOnChange={true} hoverEffect={false} inputField={true} phrases={
+            <TextController regex={/\/#$\`~]/g} defaultText={""} tabbing={true} submitOnChange={true} hoverEffect={false} inputField={true} phrases={
                 {
                     'blue': ['.', 'RootAccess'],
                     'red': [':: ', ':end ', '::end ', ': ']
                 }
-            }>
+            } caret={{style:{position:'relative', right:'2px'},timer:400,character:"|"}} >
             </TextController>
             </div>
         )

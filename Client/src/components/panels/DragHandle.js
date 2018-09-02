@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 
 function DragHandle(props){
-
-        function handleSuccess(user){
-            props.onSuccess(user);
-        }
-
         return (
             <div onMouseDown={props.onMouseDown} className="dragHandle"> 
                 <div className="WindowControl">
@@ -17,5 +12,4 @@ function DragHandle(props){
             </div>
         )
 }
-
 export default DragHandle

@@ -16,13 +16,13 @@ class ParentContainer extends Component{
             clientState:{
                 signedIn:false,
                 windows: {
-                    system:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
-                    fileExplorer:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
-                    tor:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
-                    wallet:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
-                    terminal:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
-                    ralEditor:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
-                    zombies:{open:false, focus:false, pos:{x:'8%',y:'5%'}},
+                    system:{open:false, focus:false, pos:{x:'8%',y:'5%'}, size:{width:'300px',height:'300px'}},
+                    fileExplorer:{open:false, focus:false, pos:{x:'8%',y:'5%'}, size:{width:'300px',height:'300px'}},
+                    tor:{open:false, focus:false, pos:{x:'8%',y:'5%'}, size:{width:'300px',height:'300px'}},
+                    wallet:{open:false, focus:false, pos:{x:'8%',y:'5%'}, size:{width:'300px',height:'300px'}},
+                    terminal:{open:false, focus:false, pos:{x:'8%',y:'5%'}, size:{width:'300px',height:'300px'}},
+                    ralEditor:{open:false, focus:false, pos:{x:'8%',y:'5%'}, size:{width:'300px',height:'300px'}},
+                    zombies:{open:false, focus:false, pos:{x:'8%',y:'5%'}, size:{width:'300px',height:'300px'}},
                 }
             },
             virtualPC:{},
@@ -78,12 +78,15 @@ class ParentContainer extends Component{
         this.setState(s);
     }
 
-    updateWindowsPos = (window, pos) => {
+    updateWindowsPos = (window, pos, size) => {
         let s = Object.assign({}, this.state);
         let windows = Object.assign({}, s.clientState.windows);
 
         for(var w in windows){
-            if(w == window) windows[w].pos = pos;
+            if(w == window){
+                windows[w].pos = pos;
+                windows[w].size = size;
+            }
         }
         
         s.clientState.windows = windows;
