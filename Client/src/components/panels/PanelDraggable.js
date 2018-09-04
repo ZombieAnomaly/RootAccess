@@ -8,20 +8,20 @@ function PanelDraggable(props){
 
     function onMouseDown(e){
         if (e.button !== 0) return;
-        if(!props.z) props.updateWindowZ();
+        if(!props.z) props.updateWindow("z");
 
         var nodeData = node.getBoundingClientRect();
         size = {width:nodeData.width,height:nodeData.height-7};
         dragging = true;
         rel = { x: e.pageX - nodeData.left, y: e.pageY - nodeData.top}
-        props.updateWindowPos({x:nodeData.x,y:nodeData.y},size);
+        props.updateWindow("pos",{x:nodeData.x,y:nodeData.y},size);
         e.stopPropagation(); e.preventDefault();
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseup', onMouseUp);
     }
 
     function onMouseUp(e){
-        props.updateWindowPos(pos,size);
+        props.updateWindow("pos",pos,size);
         e.stopPropagation(); e.preventDefault();
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
@@ -30,12 +30,12 @@ function PanelDraggable(props){
     function onMouseMove(e){
         if (!dragging) return;
         pos = { x: e.pageX - rel.x, y: e.pageY - rel.y};
-        props.updateWindowPos(pos,size);
+        props.updateWindow("pos",pos,size);
         e.stopPropagation(); e.preventDefault();
     }
 
-    function handleWindowClose(){ props.updateWindow(); }
-    function handleWindowMin(){ props.updateWindow(); }
+    function handleWindowClose(){ props.updateWindow("oc"); }
+    function handleWindowMin(){ props.updateWindow("oc"); }
 
     return(
         <div ref={ el => node = el } className={className} style={{...{display:props.visible, zIndex:props.z, left:props.Pos.x || pos.x , top:props.Pos.y || pos.y,

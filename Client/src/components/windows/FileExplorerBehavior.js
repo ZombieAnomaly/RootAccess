@@ -1,14 +1,35 @@
 import React, { Component } from 'react';
 import '../../Assets/css/FileExplorer.css';
 import FileExplorer from './FileExplorer';
+import Asyncfunctions from '../../Utilities/AsyncFunctions';
 
-function FileExplorerBehavior(props){
+class FileExplorerBehavior extends Component{
+
+    constructor(props){
+        super(props);
+        this.props = props;
+        this.node;
+    }
         
-    function handleClick(e){
+    handleClick = (e) => {
         e.preventDefault();
         //console.log(e.target.value);
     }
 
+    init(){
+        console.log("File Explorer Init !");
+        console.log(this.props.state);
+        let vpc = this.props.state.virtualPC;
+        if(!vpc)return;
+        Asyncfunctions.FetchHardDrive(vpc.ip)
+            .then(res => {
+                if(!res.session){return};
+                console.log(res);
+            })
+            .catch(err => console.log(err));
+    }
+
+    render(){
     return(
         <FileExplorer className={"FileExplorer"}>
             <div className="SidePanel">
@@ -36,6 +57,7 @@ function FileExplorerBehavior(props){
                 <div className="FileDisplay GridItem"></div>
             </div>
         </FileExplorer>)
+    }
 
 }
 export default FileExplorerBehavior

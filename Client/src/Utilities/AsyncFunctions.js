@@ -58,6 +58,20 @@ const functions = {
           throw Error(body.message) 
         }
         return body;
+    },
+
+    async FetchHardDrive(ip){
+        const settings = {
+            method: 'GET',
+            credentials: 'include',
+        };  
+        const response = await fetch('/vpc/HD/'+ip, settings);
+        const body = await response.json();
+
+        if (response.status !== 200) {
+            throw Error(body.message) 
+        }
+        return body;         
     }
 }
 export default functions;

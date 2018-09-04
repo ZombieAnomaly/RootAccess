@@ -1,4 +1,3 @@
-
 .Desktop{
     display:flex;
     height:100%;
@@ -28,7 +27,7 @@
     margin-left:2%;
     margin-right:2%;
     border-radius: 5px 5px 0px 0px;
-    background-image: url('http://www.omgubuntu.co.uk/wp-content/uploads/2015/03/suru-desktop-wallpaper-ubuntu-vivid.jpg');
+    background-image: url('../Images/ubuntu_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

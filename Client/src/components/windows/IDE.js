@@ -18,6 +18,10 @@ class IDE extends Component{
         this.setState({text:e.target.value});
     }
 
+    init(){
+        console.log("IDE Init");
+    }
+
     render(){
         return(
             <div className="CodeBox">
