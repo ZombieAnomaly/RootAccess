@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /Server/node_modules
+/Server/Ral-Core/old
 /Client/node_modules
 
 # testing

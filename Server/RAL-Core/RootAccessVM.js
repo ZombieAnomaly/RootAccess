@@ -45,38 +45,7 @@ class RootAccessVM {
         console.log(this.code);
         var RootAccess = this;
         eval(this.code);
-    }
-
-        //console.log( UglifyJS.parse(this.code).print_to_string({ beautify: true }) );
-        // this.globalEnv = new Environment();
-        // this.globalEnv.def("print", function(txt){
-        //     console.log(txt);
-        // })
-        // this.globalEnv.def("libs", this.Lexer.libs)
-        // this.globalEnv.def("Find", function(x){
-        //     console.log('finding',x);
-        //     return {value:"Find"};
-        // })
-        // this.globalEnv.def("Killprocess", function(x){
-        //     console.log('Killing Process...', x);
-        //     return {value:"Killprocess"};
-        // })
-        // Evaluate(this.ast,this.globalEnv);
-        // console.log(this.globalEnv);
-        // var n = this.Lexer.next();
-        // var arr = [];
-        // while(n != null){
-        //     arr.push(n);
-        //     n = this.Lexer.next();
-        // }
-        // console.log(arr);
-
-    lex(string){
-        // let str = string.slice();
-        // let tokens = str.split(/:|;/).map(s => s.trim()).filter(s => s.length > 0);
-        // console.log(tokens);
-    }
-    
+    }   
 }
 
 function print(text){
