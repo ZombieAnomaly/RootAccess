@@ -14,7 +14,7 @@ function Desktop(props){
     function handleSuccess(user){props.onSuccess(user);}
     function updateWindows(window, action, pos, size){ 
         if(props.windows[window].el && !props.windows[window].open) {props.windows[window].el.init()}; 
-        props.updateWindows(window, action, pos, size);
+            props.updateWindows(window, action, pos, size);
     }
     const func = (window, action, pos, size) => {updateWindows(window, action, pos, size)}
 

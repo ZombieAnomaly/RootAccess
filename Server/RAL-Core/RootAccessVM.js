@@ -2,8 +2,6 @@ import InputStream from './RAL-InputStream';
 import Lexer from './RAL-Lexer';
 import Parser from './RAL-Parser';
 import make_js from './RAL-CompilerJS'
-import Environment from './RAL-Env';
-import Evaluate from './RAL-Eval';
 
 class Thread{
     constructor(name){
