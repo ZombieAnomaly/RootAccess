@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/Server
+/Server/node_modules
 /Client/node_modules
 
 # testing
