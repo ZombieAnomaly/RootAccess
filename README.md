@@ -9,24 +9,25 @@
 ----
 
 # Game Features
-($ - plannned |  ! - WIP |  # - Completed)
-- **! Virtual PC, complete with upgradable hardware** (CPU, Connection Speed, Hard Drive, External Drive)
-- **! Virtual Desktop** - Inspired by *Ubuntu* play RootAccess with ease! No longer are hacking sims 1980's terminal windows that don't seem to close. Instead play RootAccess like you're using your home PC, complete with dragable and resizable windows, apps, a docker bar, and more!
-- **! RootAccess Language (RAL)** - a custom scritping language to program software / malware in-game
-- **! PVP** - In RootAccess assume you are never safe, always keep backups and never reveal your IP!
-- **$ PVE** - *Blackmail, Extort, Hack, or even help out NPCs throughout the game.* NPCs may come to you to hack into competing companies, retrieve sensitive data, or even protect their own!
+(*italic* - plannned )
 
+- [ ] **Virtual PC, complete with upgradable hardware** (CPU, Connection Speed, Hard Drive, External Drive)
+- [ ] **Virtual Desktop** - Inspired by *Ubuntu* play RootAccess with ease! No longer are hacking sims 1980's terminal windows that don't seem to close. Instead play RootAccess like you're using your home PC, complete with dragable and resizable windows, apps, a docker bar, and more!
+- [ ] **RootAccess Language (RAL)** - a custom scritping language to program software / malware in-game
+- [ ] **PVP** - In RootAccess assume you are never safe, always keep backups and never reveal your IP!
+- [ ] *PVE* - *Blackmail, Extort, Hack, or even help out NPCs throughout the game.* NPCs may come to you to hack into competing companies, retrieve sensitive data, or even protect their own!
 
 # Virtual PC Featues
-($ - plannned |  ! - WIP |  # - Completed)
-- **# RootOS** - your virtual operating system! Several apps come included (File explorer, Tor Browser, RAL Editor, Crypto Wallet, Terminal, and RootKit)
-- **! System** - view your specs here and upgrade your hardware
-- **! Code Editor** - for creating and exporting software in RAL
-- **! File Explorer** - browse through your virtual hard drive(s), download files, and organize your VPC as you please!
-- **! Crypto Wallet** - The main currency in RootAccess is crypto currency which can be bought and sold online. Converting crypto to CASH allows you to buy physical goods such as hardware or servers.
-- **! TOR Browser** - Explore the web of RootAccess. Access online shops, company pages, and more!
-- **! Terminal** - not feeling the *Ubuntu* Like UI? Enter terminal commands instead.
-- **! RootKit** - your toolbox for hacking. Search for vurnabilities, scan ports, brute force, and otherwise exploit your way through RootAccess.
+(*italic* - plannned )
+
+- [x] **RootOS** - your virtual operating system! Several apps come included (File explorer, Tor Browser, RAL Editor, Crypto Wallet, Terminal, and RootKit)
+- [ ] **System** - view your specs here and upgrade your hardware
+- [ ] **Code Editor** - for creating and exporting software in RAL
+- [ ] **File Explorer** - browse through your virtual hard drive(s), download files, and organize your VPC as you please!
+- [ ] **Crypto Wallet** - The main currency in RootAccess is crypto currency which can be bought and sold online. Converting crypto to CASH allows you to buy physical goods such as hardware or servers.
+- [ ] **TOR Browser** - Explore the web of RootAccess. Access online shops, company pages, and more!
+- [ ] **Terminal** - not feeling the *Ubuntu* Like UI? Enter terminal commands instead.
+- [ ] **RootKit** - your toolbox for hacking. Search for vurnabilities, scan ports, brute force, and otherwise exploit your way through RootAccess.
 ----
 
 # Contributing
