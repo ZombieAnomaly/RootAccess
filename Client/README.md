@@ -1,5 +1,5 @@
 # React
----
+
 The front-end side of RootAccess is built in ReactJS, which is based on component architecture and uni-directional data flow. In short, the DOM is never manipulated directly but instead a you modify a Virtual DOM through state changes.
 
 React uses JSX for their templating engine which is like html built into javascript as opposed to javascript functionality built into html. This subtle difference allows us to to encapsule component logic *within* the actually componenet instead of in this infamous *controller* mess everyone likes to talk about. This means our components can be made highly modular and *reusable*!
