@@ -11,8 +11,8 @@
 # Game Features
 (*italic* - plannned )
 
-- [ ] **Virtual PC, complete with upgradable hardware** (CPU, Connection Speed, Hard Drive, External Drive)
-- [ ] **Virtual Desktop** - Inspired by *Ubuntu* play RootAccess with ease! No longer are hacking sims 1980's terminal windows that don't seem to close. Instead play RootAccess like you're using your home PC, complete with dragable and resizable windows, apps, a docker bar, and more!
+- [x] **Virtual PC, complete with upgradable hardware** (CPU, Connection Speed, Hard Drive, External Drive)
+- [x] **Virtual Desktop** - Inspired by *Ubuntu* play RootAccess with ease! No longer are hacking sims 1980's terminal windows that don't seem to close. Instead play RootAccess like you're using your home PC, complete with dragable and resizable windows, apps, a docker bar, and more!
 - [ ] **RootAccess Language (RAL)** - a custom scritping language to program software / malware in-game
 - [ ] **PVP** - In RootAccess assume you are never safe, always keep backups and never reveal your IP!
 - [ ] *PVE* - *Blackmail, Extort, Hack, or even help out NPCs throughout the game.* NPCs may come to you to hack into competing companies, retrieve sensitive data, or even protect their own!
