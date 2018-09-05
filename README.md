@@ -19,7 +19,7 @@
 
 # Virtual PC Featues
 ($ - plannned |  ! - WIP |  # - Completed)
-- **RootOS** - your virtual operating system! Several apps come included (File explorer, Tor Browser, RAL Editor, Crypto Wallet, Terminal, and RootKit)
+- **# RootOS** - your virtual operating system! Several apps come included (File explorer, Tor Browser, RAL Editor, Crypto Wallet, Terminal, and RootKit)
 - **! System** - view your specs here and upgrade your hardware
 - **! Code Editor** - for creating and exporting software in RAL
 - **! File Explorer** - browse through your virtual hard drive(s), download files, and organize your VPC as you please!
